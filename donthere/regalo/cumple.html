@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¡FELIZ CUMPLEAÑOS! 🎉</title>
+    <style>
+       body {
+            background-color: #000000;
+            background-image: url('serpentina.gif');
+            background-size: 600px;
+            background-repeat: repeat;
+            color: #ffff00;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .marquee-text {
+            background-color: #ffff00;
+            color: #ff0000;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 5px;
+            border: 2px solid #000000;
+            margin-bottom: 20px;
+        }
+        .galeria {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        
+        /* Estilo para los enlaces que envuelven las fotos */
+        .link-foto {
+            text-decoration: none;
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+        .link-foto:hover {
+            transform: scale(1.05); /* Efecto de que se agranda un poquito al pasar el mouse */
+        }
+
+        .polaroid {
+            background: #ffffff;
+            padding: 10px 10px 30px 10px;
+            box-shadow: 5px 5px 15px #000000;
+            transform: rotate(-3deg);
+            width: 200px;
+        }
+        /* Rotación distinta para la segunda foto para mantener el estilo original */
+        .link-foto:nth-child(2) .polaroid {
+            transform: rotate(3deg);
+        }
+        .polaroid img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+        .polaroid p {
+            color: #000;
+            margin: 10px 0 0 0;
+            font-size: 16px;
+        }
+        .serpentina-izq, .serpentina-der {
+            position: fixed;
+            top: 0;
+            width: 300px;
+            z-index: 10;
+        }
+        .serpentina-izq { left: 0; }
+        .serpentina-der { right: 0; }
+
+        .btn-volver {
+            background-color: #00ffff;
+            color: #000000;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 3px outset #0000ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="pum.gif" class="serpentina-izq" alt="Serpentina">
+    <img src="pum.gif" class="serpentina-der" alt="Serpentina">
+
+    <marquee class="marquee-text">🎂 ¡MUCHAS FELICIDADES EN TU DÍA! PASALA INCREÍBLE 🎈 OKEEY 🎸</marquee>
+
+    <h1 style="font-size: 50px; text-shadow: 4px 4px #000000; color: #00ffff;">¡FELIZ CUMPLEAÑOS!</h1>
+
+    <div class="galeria">
+        
+        <a href="foto1.html" class="link-foto">
+            <div class="polaroid">
+                <img src="vikipequeña.jpg" alt="Foto 1">
+                <p>Muchas Felicidades!</p>
+            </div>
+        </a>
+
+        <a href="foto2.html" class="link-foto">
+            <div class="polaroid">
+                <img src="love.jpg" alt="Foto 2">
+                <p>TE AMO</p>
+            </div>
+        </a>
+
+        <a href="foto3.html" class="link-foto">
+            <div class="polaroid">
+                <img src="vikipequeña2.jpg" alt="Foto 3">
+                <p>Pasala hermoso</p>
+            </div>
+        </a>
+
+    </div>
+
+    <audio id="musicaFondo" loop>
+        <source src="tu musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+    <a href="index.html" class="btn-volver" onclick="localStorage.clear();">⬅ Volver al inicio</a>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('musicaFondo');
+            audio.play().catch(error => {
+                console.log("El navegador bloqueó la reproducción automática: ", error);
+            });
+        });
+    </script>
+
+</body>
+</html>
