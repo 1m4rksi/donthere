@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Álbum de Recuerdos 📸</title>
+    <style>
+        body {
+            background-color: #000000;
+            background-image: url('https://i.pinimg.com/originals/c7/42/88/c742883e33b6a56efcc7c9fd0a6ffa4c.gif');
+            background-size: 600px;
+            background-repeat: repeat;
+            color: #ffff00;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .marquee-text {
+            background-color: #ffff00;
+            color: #ff0000;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 5px;
+            border: 2px solid #000000;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 45px;
+            text-shadow: 4px 4px #000000;
+            color: #00ffff;
+        }
+
+        /* Contenedor del álbum con scroll vertical */
+        .album-container {
+            max-width: 600px;
+            height: 450px; /* Altura fija para que aparezca la barra de scroll */
+            margin: 0 auto;
+            overflow-y: scroll; /* Activa el scroll vertical */
+            border: 4px ridge #ff00ff;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            box-shadow: 8px 8px 0px #00ffff;
+        }
+
+        /* Estilo de cada tarjeta de foto individual */
+        .foto-card {
+            background: #ffffff;
+            margin: 20px auto;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 5px 5px 10px #00ffff;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .foto-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid #000;
+        }
+
+        /* La descripción que se oculta y aparece al pasar el mouse o tocar */
+        .descripcion {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #00ff00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            padding: 15px;
+            box-sizing: border-box;
+            opacity: 0; /* Oculto por defecto */
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+
+        /* Al pasar el mouse por encima (o hacer touch en celular), se ve la descripción */
+        .foto-card:hover .descripcion,
+        .foto-card:active .descripcion {
+            opacity: 1;
+        }
+
+   
+
+        .btn-volver {
+            background-color: #00ffff;
+            color: #000000;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 3px outset #0000ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Marquesina -->
+    <marquee class="marquee-text">💖 ÁLBUM SECRETO DE RECUERDOS - BAJA PARA VER MÁS 📸</marquee>
+
+    <h1>🌟 NUESTROS MOMENTOS 🌟</h1>
+    <p style="color: #ff99ff; font-size: 18px;">¡Pasa el mouse o toca cada foto para leer la descripción!</p>
+
+    <!-- ÁLBUM CON SCROLL (Calculado para 10 fotos) -->
+    <div class="album-container">
+
+        <!-- FOTO 1 -->
+        <div class="foto-card">
+            <img src="recuerdo1.jpeg" alt="Recuerdo 1">
+            <div class="descripcion"> 12-13/10/24 
+                El comienzo</div>
+        </div>
+
+        <!-- FOTO 2 -->
+        <div class="foto-card">
+            <img src="v.jpeg" alt="Recuerdo 2">
+            <div class="descripcion">Tu Inicial</div>
+        </div>
+
+        <!-- FOTO 3 -->
+        <div class="foto-card">
+            <img src="recuerdo3.jpg" alt="Recuerdo 3">
+            <div class="descripcion">8/11/24
+                Nuestra primera "cita"
+            </div>
+        </div>
+
+        <!-- FOTO 4 -->
+        <div class="foto-card">
+            <img src="recuerdo4.jpg" alt="Recuerdo 4">
+            <div class="descripcion">Nuestro primer hijo
+                "Tete"
+            </div>
+        </div>
+
+        <!-- FOTO 5 -->
+        <div class="foto-card">
+            <img src="recuerdo5.jpg" alt="Recuerdo 5">
+            <div class="descripcion">9/11/24
+                Tus primeras flores </div>
+        </div>
+
+        <!-- FOTO 6 -->
+        <div class="foto-card">
+            <img src="recuerdo6.jpg" alt="Recuerdo 6">
+            <div class="descripcion">10/12/24
+                Mi primera vez en tu casa</div>
+        </div>
+
+        <!-- FOTO 7 -->
+        <div class="foto-card">
+            <img src="recuerdo19.jpeg" alt="Recuerdo 7">
+            <div class="descripcion">4/12/24</div>
+        </div>
+
+        <!-- FOTO 8 -->
+        <div class="foto-card">
+            <img src="recuerdo12.jpeg" alt="Recuerdo 8">
+            <div class="descripcion">Oficalmente casados</div>
+        </div>
+
+        <!-- FOTO 9 -->
+        <div class="foto-card">
+            <img src="recuerdo29.gif" alt="Recuerdo 9">
+            <div class="descripcion">27/1/25
+                La primera vez que festejamos mes
+            </div>
+        </div>
+
+        <!-- FOTO 10 -->
+        <div class="foto-card">
+            <img src="twins.jpeg" alt="Recuerdo 10">
+            <div class="descripcion">TWINSS!!</div>
+        </div>
+<!-- FOTO 10 -->
+        <div class="foto-card">
+            <img src="recuerdo151.jpeg" alt="Recuerdo 11">
+            <div class="descripcion">10/3/25
+                En el hospital
+            </div>
+        </div>
+        <!-- FOTO 10 -->
+        <div class="foto-card">
+            <img src="a.jpeg" alt="Recuerdo 12">
+            <div class="descripcion">...</div>
+        </div>
+
+                <!-- FOTO 10 -->
+        <div class="foto-card">
+            <img src="recuerdo7.png" alt="Recuerdo 13">
+            <div class="descripcion">Nosotros pelcuches</div>
+        </div>
+
+                <!-- FOTO 10 -->
+        <div class="foto-card">
+            <img src="comidaromantica.jpeg" alt="Recuerdo 14">
+            <div class="descripcion">Salimos a un restaurante</div>
+        </div>
+
+                <!-- FOTO 10 -->
+        <div class="foto-card">
+            <img src="tusi.jpeg" alt="Recuerdo 15">
+            <div class="descripcion">Show de los Tussiwarriors</div>
+        </div>
+
+                <!-- FOTO 10 -->
+        <div class="foto-card">
+            <img src="odisea.jpeg" alt="Recuerdo 16">
+            <div class="descripcion">Segunda vez en el cine</div>
+        </div>
+
+
+    </div>
+
+    <audio id="musicaFondo" loop>
+        <source src="far1.mp3" type="audio/mpeg">
+    </audio>
+
+    <br>
+    <!-- Botón para volver al menú principal de cumple -->
+    <a href="cumple.html" class="btn-volver">⬅ Volver al festejo</a>
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('musicaFondo');
+            audio.play().catch(error => {
+                console.log("El navegador bloqueó la reproducción automática: ", error);
+            });
+        });
+    </script>
+
+</body>
+</html>
