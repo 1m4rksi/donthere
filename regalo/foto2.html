@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Una carta para vos 💌</title>
+    <style>
+        body {
+            background-color: #000000;
+            background-image: url('https://i.pinimg.com/originals/c7/42/88/c742883e33b6a56efcc7c9fd0a6ffa4c.gif');
+            background-size: 600px;
+            background-repeat: repeat;
+            color: #ffffff;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .marquee-text {
+            background-color: #ff00ff;
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 5px;
+            border: 2px solid #ffffff;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 45px;
+            text-shadow: 4px 4px #ff007f;
+            color: #ffff00;
+        }
+
+        /* DISEÑO DE LA CARTA ANTIGUA / ESTILO RETRO */
+        .carta-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fffaf0; /* Color papel viejo / crema */
+            color: #333333;
+            border: 4px dashed #ff1493;
+            padding: 40px;
+            box-shadow: 10px 10px 0px #00ffff;
+            text-align: left;
+            position: relative;
+        }
+
+        .carta-container p {
+            font-size: 19px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Foto dentro de la carta estilo polaroid */
+        .foto-carta {
+            float: right;
+            background: #ffffff;
+            padding: 8px 8px 25px 8px;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+            transform: rotate(4deg);
+            width: 180px;
+            margin: 0 0 15px 20px;
+        }
+
+        .foto-carta img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+
+        .foto-carta p {
+            font-size: 14px;
+            color: #000;
+            margin: 8px 0 0 0;
+            text-align: center;
+        }
+
+        /* Limpiador de flotado para que la carta no se deforme */
+        .limpiar {
+            clear: both;
+        }
+
+        /* Reproductor de música retro */
+        .reproductor-box {
+            background: #000066;
+            border: 4px ridge #ff00ff;
+            display: inline-block;
+            padding: 10px;
+            margin-top: 25px;
+            box-shadow: 5px 5px 0px #00ffff;
+        }
+        .reproductor-box p {
+            margin: 0 0 5px 0;
+            color: #ffff00;
+            font-size: 14px;
+        }
+
+        .btn-volver {
+            background-color: #00ffff;
+            color: #000000;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 3px outset #0000ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Marquesina -->
+    <marquee class="marquee-text">💌 UNA CARTA ESPECIAL PARA ALGUIEN MUY ESPECIAL - TE AMO 💌</marquee>
+
+    <h1>💖 PARA VOS 💖</h1>
+
+    <!-- HOJA DE CARTA -->
+    <div class="carta-container">
+        
+        <!-- Foto al costado de la carta (puedes cambiar "love.jpg" por tu foto) -->
+        <div class="foto-carta">
+            <img src="love.jpg" alt="Foto Carta">
+            <p>¡Te amo! ❤️</p>
+        </div>
+
+        <p><strong>Querida/o Viki:</strong></p>
+
+        <p>Quería escribirte estas palabras para recordarte lo muchísimo que significás para mí. A veces las palabras comunes no alcanzan para expresar todo el cariño y el amor que te tengo, pero quería intentar dejarlo plasmado acá.</p>
+
+        <p>Gracias por estar siempre, por cada risa compartida, por los momentos hermosos y por hacer que la vida sea mucho más linda y divertida a tu lado. Sos una persona maravillosa y te merecés todo lo más hermoso de este mundo, hoy en tu cumpleaños y todos los días.</p>
+
+        <p>Espero que la pases increíble y que este nuevo año de vida venga cargado de sueños cumplidos y muchísima felicidad.</p>
+
+        <p style="text-align: right; margin-top: 30px; font-weight: bold; color: #cc0066;">
+            ¡Te amo con todo mi corazón! 💕<br>
+            Para siempre. ✨
+        </p>
+
+        <div class="limpiar"></div>
+    </div>
+
+    <audio id="musicaFondo" loop>
+        <source src="Loquita.mp3" type="audio/mpeg">
+    </audio>
+
+    <br>
+    <!-- Botón para volver al menú principal de cumple -->
+    <a href="cumple.html" class="btn-volver">⬅ Volver al festejo</a>
+
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('musicaFondo');
+            audio.play().catch(error => {
+                console.log("El navegador bloqueó la reproducción automática: ", error);
+            });
+        });
+    </script>
+
+</body>
+</html>
